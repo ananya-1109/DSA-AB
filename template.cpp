@@ -33,7 +33,7 @@ T arithmetic<T>::sub(){
 
 int main(){
     arithmetic<int> ar(10,5);
-    cout<<ar.add()<<endl;
+    cout<<ar.add()<<endl;  //can perform on whichever data type it wants to 
     arithmetic<float> ar1(1.5,1.7);
     cout<<ar1.sub()<<endl;
 
