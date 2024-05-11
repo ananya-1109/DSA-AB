@@ -64,7 +64,14 @@ int main(){
 
     create(A,5);
 
-    printf("%d\n",isSorted(first));
+    if(isSorted(first)){
+        printf("sorted\n");
+    }
+    else{
+        printf("not sorted\n");
+    }
+
+    //printf("%d\n",isSorted(first));
     display(first);
 
     return 0;
