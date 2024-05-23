@@ -106,10 +106,31 @@ int isBalanced(char *exp){
     }
 }
 
+int isBalanced2(char *exp){
+    int i;
+    for(i=0;exp[i]!='\0';i++){
+        if(exp[i]==40 || exp[i]==91 || exp[i]==123){
+            push(exp[i]);
+        }
+        else if(exp[i]==41 || exp[i]==93 || exp[i]==125){
+            if(top==NULL){
+                return 0;
+            }
+            pop();
+        }
+    }
+    if(top==NULL){return 1;}
+    else{
+        return 0;
+    }
+}
+
 int main(){
     char *exp="((a+b)*(c-d))";
+    char *exp2="{([a+b]*[c-d])/e}";
 
     printf("%d ",isBalanced(exp));
-    
+    printf("%d ",isBalanced2(exp2));
+
     return 0;
 }
